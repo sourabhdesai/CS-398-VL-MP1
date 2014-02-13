@@ -1,4 +1,4 @@
-var datafull = require('./datafull.json');
+var datafull = require('./datafull.json'); // This should be changed to require('../datafull.json')
 datafull = datafull.splice(datafull.length/100, (99*datafull.length)/100);
 var fs = require('fs');
 
@@ -32,6 +32,7 @@ for(var i = 0; i < array.length; i++) {
 console.log(array[array.length-1]);
 
 fs.writeFile("datachapters.json", JSON.stringify(array,null,'\t') , function (err) {
+	// Save in same directory as this .js file
     if(err) {
         console.log(err);
     } else {

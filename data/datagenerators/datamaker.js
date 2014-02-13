@@ -1,8 +1,8 @@
 var fs = require('fs');
-var chapter1 = require('./data1.json');
-var chapter2 = require('./data2.json');
-var chapter3 = require('./data3.json');
-var chapter4 = require('./data4.json');
+var chapter1 = require('./data1.json'); // This should be changed to require('../data1.json')
+var chapter2 = require('./data2.json'); // This should be changed to require('../data2.json')
+var chapter3 = require('./data3.json'); // This should be changed to require('../data3.json')
+var chapter4 = require('./data4.json'); // This should be changed to require('../data4.json')
 
 /** Parts of Speech Abbreviation Translation
 
@@ -125,6 +125,7 @@ var chapters = chapter1.concat(
 				);
 
 fs.writeFile("datafull.json", JSON.stringify(chapters,null,'\t') , function (err) {
+	// Save in same directory as this .js file
     if(err) {
         console.log(err);
     } else {
@@ -133,6 +134,7 @@ fs.writeFile("datafull.json", JSON.stringify(chapters,null,'\t') , function (err
 });
 
 fs.writeFile("datapostags.json", JSON.stringify(POSArray,null,'\t'), function (err) {
+	// Save in same directory as this .js file
     if(err) {
         console.log(err);
     } else {
