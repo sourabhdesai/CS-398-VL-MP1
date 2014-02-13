@@ -1,5 +1,6 @@
 function main() {
     // http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+    // This code based on: http://bl.ocks.org/mbostock/1153292
     var links = [
     {
       "source": "said",
